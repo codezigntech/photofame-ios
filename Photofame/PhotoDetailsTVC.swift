@@ -22,7 +22,7 @@ class PhotoDetailsTVC: UIViewController {
     
     var photo: UIImage?
     
-    let TAGS = ["Tech", "Design", "Humor", "Travel", "Music", "Writing", "Social Media", "Life", "Education", "Edtech", "Education Reform", "Photography", "Startup", "Poetry", "Women In Tech", "Female Founders", "Business", "Fiction", "Love", "Food", "Sports"]
+//    let TAGS = ["Tech", "Design", "Humor", "Travel", "Music", "Writing", "Social Media", "Life", "Education", "Edtech", "Education Reform", "Photography", "Startup", "Poetry", "Women In Tech", "Female Founders", "Business", "Fiction", "Love", "Food", "Sports"]
     
     var sizingCell: TagCell?
     
@@ -76,7 +76,7 @@ class PhotoDetailsTVC: UIViewController {
                     self.isFavourite = result["is_favorite"] as! Bool
                     self.shares = result["shares"] as? Int
                     
-                    self.tableView.reloadData()
+                    
                     
                     self.mediaDetails.celebrityName = result["celebrity_name"] as? String
                     self.mediaDetails.shares = result["shares"] as? Int
@@ -87,6 +87,14 @@ class PhotoDetailsTVC: UIViewController {
                     self.mediaDetails.downloads = result["downloads"] as? Int
                 }
                 
+                if let tags = resultDict["tags"] as? [String]  {
+                    
+                    self.mediaDetails.tags = tags
+                }
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             }
         }
 
@@ -107,10 +115,14 @@ class PhotoDetailsTVC: UIViewController {
         tabCell.collectionView.backgroundColor = UIColor.clear
         self.sizingCell = (cellNib.instantiate(withOwner: nil, options: nil) as NSArray).firstObject as! TagCell?
         tabCell.flowLayout.sectionInset = UIEdgeInsetsMake(0, 15, 0, 15)
-        for name in TAGS {
+        for name in mediaDetails.tags {
             let tag = Tag()
             tag.name = name
             self.tags.append(tag)
+        }
+        
+        DispatchQueue.main.async {
+            tabCell.collectionView.reloadData()
         }
     }
     
@@ -138,6 +150,7 @@ extension PhotoDetailsTVC: UITableViewDataSource, UITableViewDelegate {
             return photoCell
         } else if indexPath.row == 1 {
             let optionsCell = tableView.dequeueReusableCell(withIdentifier: "OptionsTableViewCell") as! OptionsTableViewCell
+            optionsCell.delegate = self
             
             if isFavourite {
                 optionsCell.favoriteImageView.image = UIImage(named: "Heart")
@@ -248,7 +261,17 @@ extension PhotoDetailsTVC: UICollectionViewDataSource, UICollectionViewDelegate,
     
 }
 
-
+extension PhotoDetailsTVC: OptionsTableViewCellProtocol {
+    
+    func didTapOnDownload() {
+        UIImageWriteToSavedPhotosAlbum(photo!, self, #selector(savedMessage), nil)
+    }
+    
+    func savedMessage() {
+        
+        self.showAlert(title: "", message: "Saved to photo gallery.")
+    }
+}
 
 
 

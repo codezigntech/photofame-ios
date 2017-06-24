@@ -8,18 +8,23 @@
 
 import UIKit
 
+
+protocol OptionsTableViewCellProtocol {
+    
+    func didTapOnDownload()
+}
+
 class OptionsTableViewCell: UITableViewCell {
 
+    // Properties
+    
+    var delegate:OptionsTableViewCellProtocol?
     
     // Outlets
     @IBOutlet weak var favoriteImageView: UIImageView!
-    
     @IBOutlet weak var viewsLabel: UILabel!
-    
     @IBOutlet weak var sharesLabel: UILabel!
-    
     @IBOutlet weak var favouritesLabel: UILabel!
-    
     @IBOutlet weak var downloadsLabel: UILabel!
     
     // Actions
@@ -27,7 +32,7 @@ class OptionsTableViewCell: UITableViewCell {
     
     @IBAction func downloadAction(_ sender: UIButton) {
         
-        
+        self.delegate?.didTapOnDownload()
     }
     
     @IBAction func shareAction(_ sender: UIButton) {

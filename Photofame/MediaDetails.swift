@@ -20,4 +20,6 @@ class MediaDetails: NSObject {
     var thumb: String?
     var views: Int?
     
+    var tags = [String]()
+    
 }
