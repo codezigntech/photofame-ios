@@ -20,15 +20,15 @@ class PhotoStreamViewController: UICollectionViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    if let patternImage = UIImage(named: "Pattern") {
-      view.backgroundColor = UIColor(patternImage: patternImage)
-    }
+//    if let patternImage = UIImage(named: "Pattern") {
+//      view.backgroundColor = UIColor(patternImage: patternImage)
+//    }
     // Set the PinterestLayout delegate
     if let layout = collectionView?.collectionViewLayout as? PinterestLayout {
       layout.delegate = self
     }
     collectionView!.backgroundColor = UIColor.clear
-    collectionView!.contentInset = UIEdgeInsets(top: 23, left: 5, bottom: 10, right: 5)
+//    collectionView!.contentInset = UIEdgeInsets(top: 23, left: 5, bottom: 10, right: 5)
   }
   
 }
@@ -44,6 +44,11 @@ extension PhotoStreamViewController {
     cell.photo = photos[indexPath.item]
     return cell
   }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        print(indexPath.row)
+    }
   
 }
 
@@ -67,5 +72,6 @@ extension PhotoStreamViewController : PinterestLayoutDelegate {
     let height = annotationPadding + annotationHeaderHeight + commentHeight + annotationPadding
     return height
   }
+    
 }
 
