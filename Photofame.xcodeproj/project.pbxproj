@@ -15,6 +15,15 @@
 		E838FC871EFE42C6007097E4 /* PhotofameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FC861EFE42C6007097E4 /* PhotofameTests.swift */; };
 		E838FC921EFE42C6007097E4 /* PhotofameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FC911EFE42C6007097E4 /* PhotofameUITests.swift */; };
 		E838FCA41EFE46F0007097E4 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCA31EFE46F0007097E4 /* Keys.swift */; };
+		E838FCA61EFE50C2007097E4 /* Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E838FCA51EFE50C2007097E4 /* Photos.xcassets */; };
+		E838FCA81EFE50C8007097E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E838FCA71EFE50C8007097E4 /* Images.xcassets */; };
+		E838FCAA1EFE50EE007097E4 /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = E838FCA91EFE50EE007097E4 /* Photos.plist */; };
+		E838FCB21EFE5124007097E4 /* AnnotatedPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCAC1EFE5124007097E4 /* AnnotatedPhotoCell.swift */; };
+		E838FCB31EFE5124007097E4 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCAD1EFE5124007097E4 /* Photo.swift */; };
+		E838FCB41EFE5124007097E4 /* PhotoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCAE1EFE5124007097E4 /* PhotoStreamViewController.swift */; };
+		E838FCB51EFE5124007097E4 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCAF1EFE5124007097E4 /* PinterestLayout.swift */; };
+		E838FCB61EFE5124007097E4 /* RoundedCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCB01EFE5124007097E4 /* RoundedCornersView.swift */; };
+		E838FCB71EFE5124007097E4 /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCB11EFE5124007097E4 /* UIImage+Decompression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		E838FC911EFE42C6007097E4 /* PhotofameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotofameUITests.swift; sourceTree = "<group>"; };
 		E838FC931EFE42C6007097E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E838FCA31EFE46F0007097E4 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		E838FCA51EFE50C2007097E4 /* Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Photos.xcassets; sourceTree = "<group>"; };
+		E838FCA71EFE50C8007097E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E838FCA91EFE50EE007097E4 /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
+		E838FCAC1EFE5124007097E4 /* AnnotatedPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotatedPhotoCell.swift; sourceTree = "<group>"; };
+		E838FCAD1EFE5124007097E4 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		E838FCAE1EFE5124007097E4 /* PhotoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewController.swift; sourceTree = "<group>"; };
+		E838FCAF1EFE5124007097E4 /* PinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		E838FCB01EFE5124007097E4 /* RoundedCornersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornersView.swift; sourceTree = "<group>"; };
+		E838FCB11EFE5124007097E4 /* UIImage+Decompression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +120,8 @@
 				E838FC711EFE42C6007097E4 /* AppDelegate.swift */,
 				E838FC731EFE42C6007097E4 /* ViewController.swift */,
 				E838FCA31EFE46F0007097E4 /* Keys.swift */,
+				E838FCB81EFE5130007097E4 /* StaggeredView */,
+				E838FCAB1EFE50F7007097E4 /* Assets */,
 				E838FC751EFE42C6007097E4 /* Main.storyboard */,
 				E838FC781EFE42C6007097E4 /* Assets.xcassets */,
 				E838FC7A1EFE42C6007097E4 /* LaunchScreen.storyboard */,
@@ -126,6 +146,29 @@
 				E838FC931EFE42C6007097E4 /* Info.plist */,
 			);
 			path = PhotofameUITests;
+			sourceTree = "<group>";
+		};
+		E838FCAB1EFE50F7007097E4 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E838FCA51EFE50C2007097E4 /* Photos.xcassets */,
+				E838FCA71EFE50C8007097E4 /* Images.xcassets */,
+				E838FCA91EFE50EE007097E4 /* Photos.plist */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		E838FCB81EFE5130007097E4 /* StaggeredView */ = {
+			isa = PBXGroup;
+			children = (
+				E838FCAC1EFE5124007097E4 /* AnnotatedPhotoCell.swift */,
+				E838FCAD1EFE5124007097E4 /* Photo.swift */,
+				E838FCAE1EFE5124007097E4 /* PhotoStreamViewController.swift */,
+				E838FCAF1EFE5124007097E4 /* PinterestLayout.swift */,
+				E838FCB01EFE5124007097E4 /* RoundedCornersView.swift */,
+				E838FCB11EFE5124007097E4 /* UIImage+Decompression.swift */,
+			);
+			name = StaggeredView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,9 +281,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E838FCA61EFE50C2007097E4 /* Photos.xcassets in Resources */,
+				E838FCA81EFE50C8007097E4 /* Images.xcassets in Resources */,
 				E838FC7C1EFE42C6007097E4 /* LaunchScreen.storyboard in Resources */,
 				E838FC791EFE42C6007097E4 /* Assets.xcassets in Resources */,
 				E838FC771EFE42C6007097E4 /* Main.storyboard in Resources */,
+				E838FCAA1EFE50EE007097E4 /* Photos.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +314,12 @@
 				E838FC741EFE42C6007097E4 /* ViewController.swift in Sources */,
 				E838FCA41EFE46F0007097E4 /* Keys.swift in Sources */,
 				E838FC721EFE42C6007097E4 /* AppDelegate.swift in Sources */,
+				E838FCB61EFE5124007097E4 /* RoundedCornersView.swift in Sources */,
+				E838FCB71EFE5124007097E4 /* UIImage+Decompression.swift in Sources */,
+				E838FCB51EFE5124007097E4 /* PinterestLayout.swift in Sources */,
+				E838FCB41EFE5124007097E4 /* PhotoStreamViewController.swift in Sources */,
+				E838FCB21EFE5124007097E4 /* AnnotatedPhotoCell.swift in Sources */,
+				E838FCB31EFE5124007097E4 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
