@@ -13,7 +13,12 @@ class PhotoDetailsTVC: UIViewController {
     
     
     // MARK: - Properties
+    
+    var photoObject: Photo!
+    
     var tags = [Tag]()
+    
+    var mediaDetails = MediaDetails()
     
     var photo: UIImage?
     
@@ -21,10 +26,16 @@ class PhotoDetailsTVC: UIViewController {
     
     var sizingCell: TagCell?
     
+    var isFavourite = false
+    var shares: Int?
+
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var closeButton: UIButton!
+    
+    @IBOutlet weak var viewsLabel: UILabel!
+    
     
     // MARK: - Actions
     
@@ -56,7 +67,29 @@ class PhotoDetailsTVC: UIViewController {
         
         
         // data
-        
+        NetworkManager.getMediaDetails(forId: photoObject.id!) { (resultDict) in
+            
+            
+            if let resultDict = resultDict {
+                
+                if let result = resultDict["details"] as? [String:Any]  {
+                    self.isFavourite = result["is_favorite"] as! Bool
+                    self.shares = result["shares"] as? Int
+                    
+                    self.tableView.reloadData()
+                    
+                    self.mediaDetails.celebrityName = result["celebrity_name"] as? String
+                    self.mediaDetails.shares = result["shares"] as? Int
+                    self.mediaDetails.favorites = result["favorites"] as? Int
+                    self.mediaDetails.views = result["views"] as? Int
+                    self.mediaDetails.isFavorite = result["is_favorite"] as? Bool
+                    self.mediaDetails.isObscene = result["is_obscene"] as? Bool
+                    self.mediaDetails.downloads = result["downloads"] as? Int
+                }
+                
+            }
+        }
+
         
     }
 
@@ -106,6 +139,25 @@ extension PhotoDetailsTVC: UITableViewDataSource, UITableViewDelegate {
         } else if indexPath.row == 1 {
             let optionsCell = tableView.dequeueReusableCell(withIdentifier: "OptionsTableViewCell") as! OptionsTableViewCell
             
+            if isFavourite {
+                optionsCell.favoriteImageView.image = UIImage(named: "Heart")
+            } else {
+                optionsCell.favoriteImageView.image = UIImage(named: "Heart_line")
+            }
+            
+            // data
+            if let views = mediaDetails.views {
+                optionsCell.viewsLabel.text = "\(views)"
+            }
+            if let shares = mediaDetails.shares {
+                optionsCell.sharesLabel.text = "\(shares)"
+            }
+            if let favorites = mediaDetails.favorites {
+                optionsCell.favouritesLabel.text = "\(favorites)"
+            }
+            if let dowloads = mediaDetails.downloads {
+                optionsCell.downloadsLabel.text = "\(dowloads)"
+            }
             
             return optionsCell
         } else if indexPath.row == 2 {
@@ -117,6 +169,9 @@ extension PhotoDetailsTVC: UITableViewDataSource, UITableViewDelegate {
             
             infoCell.hireMeButton.layer.masksToBounds = true
             infoCell.hireMeButton.layer.cornerRadius = infoCell.hireMeButton.frame.height / 2.0
+            
+            // data
+            infoCell.nameLabel.text = mediaDetails.celebrityName
             
             
             return infoCell

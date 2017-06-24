@@ -21,10 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dn-oR-9rw">
+                                <rect key="frame" x="0.0" y="127" width="768" height="897"/>
+                                <connections>
+                                    <segue destination="GcR-XE-Spx" kind="embed" id="D8f-uS-X6X"/>
+                                </connections>
+                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z2B-rn-pOP">
                                 <rect key="frame" x="0.0" y="127" width="768" height="897"/>
                                 <connections>
-                                    <segue destination="CeA-wL-dmw" kind="embed" id="JJi-3f-a7s"/>
+                                    <segue destination="CeA-wL-dmw" kind="embed" identifier="PhotoStreamViewController" id="JJi-3f-a7s"/>
                                 </connections>
                             </containerView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUf-f0-ufn">
@@ -100,12 +106,9 @@
                                     <constraint firstItem="0cw-VP-WcC" firstAttribute="top" secondItem="dc8-HY-ESm" secondAttribute="bottom" id="wlj-bk-Rug"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dn-oR-9rw">
-                                <rect key="frame" x="0.0" y="127" width="768" height="897"/>
-                                <connections>
-                                    <segue destination="GcR-XE-Spx" kind="embed" id="D8f-uS-X6X"/>
-                                </connections>
-                            </containerView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ccg-Vd-tEf">
+                                <rect key="frame" x="366" y="937" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.023529411764705882" green="0.023529411764705882" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -120,8 +123,10 @@
                             <constraint firstAttribute="trailing" secondItem="Hnc-cS-Ozo" secondAttribute="trailing" id="iUF-Al-qvS"/>
                             <constraint firstItem="Z2B-rn-pOP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="it6-cE-pAh"/>
                             <constraint firstItem="Hnc-cS-Ozo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nv9-DR-JXI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ccg-Vd-tEf" secondAttribute="bottom" constant="50" id="o0b-ep-H1l"/>
                             <constraint firstItem="5dn-oR-9rw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r6l-Al-SEw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z2B-rn-pOP" secondAttribute="bottom" id="u8X-gk-rlK"/>
+                            <constraint firstItem="Ccg-Vd-tEf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vZo-0v-Als"/>
                         </constraints>
                     </view>
                     <connections>
@@ -129,6 +134,7 @@
                         <outlet property="editorsContainerView" destination="5dn-oR-9rw" id="7j1-A0-73X"/>
                         <outlet property="editorsLineView" destination="0cw-VP-WcC" id="swv-oA-aco"/>
                         <outlet property="gridContainerView" destination="Z2B-rn-pOP" id="V51-91-4UO"/>
+                        <outlet property="loadMoreActivity" destination="Ccg-Vd-tEf" id="Y9i-IC-HYd"/>
                         <outlet property="popularButton" destination="tc3-gt-EIe" id="8ZQ-LK-UqG"/>
                         <outlet property="popularLineView" destination="Jpr-fh-OpJ" id="xIh-wt-JeM"/>
                     </connections>
@@ -140,7 +146,7 @@
         <!--Photo Stream View Controller-->
         <scene sceneID="l4Y-VW-5Ag">
             <objects>
-                <collectionViewController id="CeA-wL-dmw" customClass="PhotoStreamViewController" customModule="Photofame" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="PhotoStreamViewController" id="CeA-wL-dmw" customClass="PhotoStreamViewController" customModule="Photofame" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="GMv-Di-5fu">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="897"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,7 +171,7 @@
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="1" green="0.71951498589999996" blue="0.40501845219999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="eU1-Et-DUW" firstAttribute="top" secondItem="dTY-wC-o3A" secondAttribute="top" id="0qO-i5-tfz"/>
                                                 <constraint firstAttribute="trailing" secondItem="eU1-Et-DUW" secondAttribute="trailing" id="GBw-I4-NyV"/>
@@ -189,6 +195,7 @@
                                 <connections>
                                     <outlet property="imageView" destination="eU1-Et-DUW" id="zEW-RF-p1O"/>
                                     <outlet property="imageViewHeightLayoutConstraint" destination="i48-RD-n4t" id="WAt-r7-OxX"/>
+                                    <outlet property="myBackgroudView" destination="dTY-wC-o3A" id="RZp-4l-gGd"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -435,7 +442,11 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
+                                            <outlet property="downloadsLabel" destination="0Cx-r7-ZiJ" id="g96-Qh-iqk"/>
                                             <outlet property="favoriteImageView" destination="gY6-3b-YgJ" id="RyB-LS-z8B"/>
+                                            <outlet property="favouritesLabel" destination="Wbp-Ci-QwP" id="EpS-Y4-W06"/>
+                                            <outlet property="sharesLabel" destination="IhJ-Qm-Khp" id="8Tp-8p-R0N"/>
+                                            <outlet property="viewsLabel" destination="RdD-cT-L4q" id="sEG-nf-zzN"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="InfoTableViewCell" rowHeight="150" id="IeC-YR-NYh" customClass="InfoTableViewCell" customModule="Photofame" customModuleProvider="target">

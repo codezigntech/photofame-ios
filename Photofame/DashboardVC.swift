@@ -12,8 +12,6 @@ class DashboardVC: UIViewController {
 
     // MARK: - Properties
     
-    
-    
     // MARK: - Outlets
     @IBOutlet weak var gridContainerView: UIView!
     @IBOutlet weak var editorsContainerView: UIView!
@@ -23,6 +21,9 @@ class DashboardVC: UIViewController {
     
     @IBOutlet weak var popularLineView: UIView!
     @IBOutlet weak var editorsLineView: UIView!
+    
+    @IBOutlet weak var loadMoreActivity: UIActivityIndicatorView!
+    
     
     // MARK: - Actions
     
@@ -54,12 +55,16 @@ class DashboardVC: UIViewController {
         hideEditorsView()
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "PhotoStreamViewController" {
+            
+            // Set references
+           let  photoStreamViewController = segue.destination as! PhotoStreamViewController
+            photoStreamViewController.dashboardViewController = self
+        }
+    }
 
     // MAKR: -
     
@@ -91,6 +96,18 @@ class DashboardVC: UIViewController {
         self.gridContainerView.isHidden = false
     }
     
+    // MARK: - 
     
+    func showLoadMore() {
+        
+        self.loadMoreActivity.startAnimating()
+        self.loadMoreActivity.isHidden = false
+    }
+    
+    
+    func hideLoadMore() {
+        
+        self.loadMoreActivity.stopAnimating()
+    }
     
 }

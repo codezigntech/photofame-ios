@@ -14,6 +14,14 @@ class OptionsTableViewCell: UITableViewCell {
     // Outlets
     @IBOutlet weak var favoriteImageView: UIImageView!
     
+    @IBOutlet weak var viewsLabel: UILabel!
+    
+    @IBOutlet weak var sharesLabel: UILabel!
+    
+    @IBOutlet weak var favouritesLabel: UILabel!
+    
+    @IBOutlet weak var downloadsLabel: UILabel!
+    
     // Actions
     
     

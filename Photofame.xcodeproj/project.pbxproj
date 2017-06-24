@@ -36,6 +36,10 @@
 		E838FCDB1EFEA4E6007097E4 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCD71EFEA4E6007097E4 /* Tag.swift */; };
 		E838FCDC1EFEA4E6007097E4 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCD81EFEA4E6007097E4 /* TagCell.swift */; };
 		E838FCDD1EFEA4E6007097E4 /* TagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E838FCD91EFEA4E6007097E4 /* TagCell.xib */; };
+		E838FCE01EFECB2D007097E4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCDF1EFECB2D007097E4 /* NetworkManager.swift */; };
+		E838FCE21EFEE12A007097E4 /* LoadMore.xib in Resources */ = {isa = PBXBuildFile; fileRef = E838FCE11EFEE12A007097E4 /* LoadMore.xib */; };
+		E838FCE41EFEF6FB007097E4 /* SharedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCE31EFEF6FB007097E4 /* SharedCache.swift */; };
+		E838FCE61EFF0CA0007097E4 /* MediaDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCE51EFF0CA0007097E4 /* MediaDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +95,10 @@
 		E838FCD71EFEA4E6007097E4 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		E838FCD81EFEA4E6007097E4 /* TagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		E838FCD91EFEA4E6007097E4 /* TagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagCell.xib; sourceTree = "<group>"; };
+		E838FCDF1EFECB2D007097E4 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E838FCE11EFEE12A007097E4 /* LoadMore.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadMore.xib; sourceTree = "<group>"; };
+		E838FCE31EFEF6FB007097E4 /* SharedCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedCache.swift; sourceTree = "<group>"; };
+		E838FCE51EFF0CA0007097E4 /* MediaDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +152,8 @@
 				E838FC711EFE42C6007097E4 /* AppDelegate.swift */,
 				E838FCB91EFE6649007097E4 /* DashboardVC.swift */,
 				E838FCC91EFE9503007097E4 /* Utilities.swift */,
+				E838FCE31EFEF6FB007097E4 /* SharedCache.swift */,
+				E838FCDE1EFEC7AB007097E4 /* NetworkManager */,
 				E838FCD41EFEA4A5007097E4 /* PhotoDetails */,
 				E838FCC61EFE9277007097E4 /* Models */,
 				E838FCC51EFE9259007097E4 /* Controllers */,
@@ -192,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				E838FCAC1EFE5124007097E4 /* AnnotatedPhotoCell.swift */,
+				E838FCE11EFEE12A007097E4 /* LoadMore.xib */,
 				E838FCAD1EFE5124007097E4 /* Photo.swift */,
 				E838FCAE1EFE5124007097E4 /* PhotoStreamViewController.swift */,
 				E838FCAF1EFE5124007097E4 /* PinterestLayout.swift */,
@@ -211,6 +222,7 @@
 		E838FCC61EFE9277007097E4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E838FCE51EFF0CA0007097E4 /* MediaDetails.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -245,6 +257,14 @@
 				E838FCD91EFEA4E6007097E4 /* TagCell.xib */,
 			);
 			name = tags;
+			sourceTree = "<group>";
+		};
+		E838FCDE1EFEC7AB007097E4 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				E838FCDF1EFECB2D007097E4 /* NetworkManager.swift */,
+			);
+			name = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +381,7 @@
 				E838FCC41EFE902B007097E4 /* Temp.xcassets in Resources */,
 				E838FCA61EFE50C2007097E4 /* Photos.xcassets in Resources */,
 				E838FCA81EFE50C8007097E4 /* Images.xcassets in Resources */,
+				E838FCE21EFEE12A007097E4 /* LoadMore.xib in Resources */,
 				E838FC7C1EFE42C6007097E4 /* LaunchScreen.storyboard in Resources */,
 				E838FC791EFE42C6007097E4 /* Assets.xcassets in Resources */,
 				E838FC771EFE42C6007097E4 /* Main.storyboard in Resources */,
@@ -399,9 +420,12 @@
 				E838FCDB1EFEA4E6007097E4 /* Tag.swift in Sources */,
 				E838FCB71EFE5124007097E4 /* UIImage+Decompression.swift in Sources */,
 				E838FCD11EFE9E26007097E4 /* InfoTableViewCell.swift in Sources */,
+				E838FCE41EFEF6FB007097E4 /* SharedCache.swift in Sources */,
 				E838FCC21EFE889E007097E4 /* PhotoDetailsTVC.swift in Sources */,
 				E838FCDA1EFEA4E6007097E4 /* FlowLayout.swift in Sources */,
+				E838FCE01EFECB2D007097E4 /* NetworkManager.swift in Sources */,
 				E838FCCA1EFE9503007097E4 /* Utilities.swift in Sources */,
+				E838FCE61EFF0CA0007097E4 /* MediaDetails.swift in Sources */,
 				E838FCB51EFE5124007097E4 /* PinterestLayout.swift in Sources */,
 				E838FCB41EFE5124007097E4 /* PhotoStreamViewController.swift in Sources */,
 				E838FCB21EFE5124007097E4 /* AnnotatedPhotoCell.swift in Sources */,
