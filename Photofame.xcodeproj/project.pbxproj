@@ -14,6 +14,7 @@
 		E838FC7C1EFE42C6007097E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E838FC7A1EFE42C6007097E4 /* LaunchScreen.storyboard */; };
 		E838FC871EFE42C6007097E4 /* PhotofameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FC861EFE42C6007097E4 /* PhotofameTests.swift */; };
 		E838FC921EFE42C6007097E4 /* PhotofameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FC911EFE42C6007097E4 /* PhotofameUITests.swift */; };
+		E838FCA21EFE46BF007097E4 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCA11EFE46BF007097E4 /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E838FC8D1EFE42C6007097E4 /* PhotofameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotofameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E838FC911EFE42C6007097E4 /* PhotofameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotofameUITests.swift; sourceTree = "<group>"; };
 		E838FC931EFE42C6007097E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E838FCA11EFE46BF007097E4 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				E838FC711EFE42C6007097E4 /* AppDelegate.swift */,
 				E838FC731EFE42C6007097E4 /* ViewController.swift */,
+				E838FCA11EFE46BF007097E4 /* Keys.swift */,
 				E838FC751EFE42C6007097E4 /* Main.storyboard */,
 				E838FC781EFE42C6007097E4 /* Assets.xcassets */,
 				E838FC7A1EFE42C6007097E4 /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E838FC741EFE42C6007097E4 /* ViewController.swift in Sources */,
+				E838FCA21EFE46BF007097E4 /* Keys.swift in Sources */,
 				E838FC721EFE42C6007097E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +522,7 @@
 				E838FC981EFE42C6007097E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E838FC991EFE42C6007097E4 /* Build configuration list for PBXNativeTarget "PhotofameTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +531,7 @@
 				E838FC9B1EFE42C6007097E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E838FC9C1EFE42C6007097E4 /* Build configuration list for PBXNativeTarget "PhotofameUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +540,7 @@
 				E838FC9E1EFE42C6007097E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
