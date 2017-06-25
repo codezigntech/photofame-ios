@@ -17,6 +17,7 @@ class UploadsVC: UIViewController {
 //    var tags = [Tag]()
     var sizingCell: TagCell?
     var mediaDetailsArray = [MediaDetails]()
+    var loadingCompleted: Bool = false
     
     // MARK: - Outlets
     @IBOutlet weak var uploadButton: UIButton!
@@ -123,6 +124,7 @@ extension UploadsVC: UITableViewDataSource, UITableViewDelegate {
 //        }
         
         
+        
         if mediaDetails.tagsObjects.count > 0 {
             uploadCell.activityIndicator.stopAnimating()
         }
@@ -201,8 +203,13 @@ extension UploadsVC: UIImagePickerControllerDelegate, UINavigationControllerDele
                             if let code = parseJSON["code"] as? Int {
                                 
                                 if code == 200 {
+                                    
+                                    self.loadingCompleted = true
+                                    
                                     if let result = parseJSON["result"] as? [String: Any] {
                                         if let tags = result["tags"] as? [String] {
+                                            
+                                            
                                             
                                             for name in tags {
                                                 let tag = Tag()

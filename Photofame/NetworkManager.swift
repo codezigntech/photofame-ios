@@ -13,7 +13,7 @@ class NetworkManager: NSObject {
     
       class func getMediaService(forOffset offset: String, completion: @escaping ([Any]?) -> ()) {
         
-        let dict = ["photo_grapher_id": "1", "offset":"\(offset)"] as [String: Any]
+        let dict = ["photo_grapher_id": "1", "offset":"0"] as [String: Any]
         if let jsonData = try? JSONSerialization.data(withJSONObject: dict, options: []) {
             
             

@@ -15,7 +15,8 @@ class PhotoStreamViewController: UICollectionViewController {
     // Properties
     
     var dashboardViewController: DashboardVC!
-    var isLoadingImages: Bool = false
+//    var isLoadingImages: Bool = false
+    
     
     
 //    var photos = Photo.allPhotos()
@@ -63,7 +64,10 @@ class PhotoStreamViewController: UICollectionViewController {
         
         let offset = "\(photos.count)"
         
-        self.isLoadingImages = true
+        self.photos = [Photo]()
+//        self.collectionView?.reloadData()
+        
+//        self.isLoadingImages = true
         NetworkManager.getMediaService(forOffset: offset) { (result) in
             print("loading images.....")
             if let result = result {
@@ -89,7 +93,7 @@ class PhotoStreamViewController: UICollectionViewController {
                     self.collectionView?.reloadData()
                 }
                 
-                self.isLoadingImages = false
+//                self.isLoadingImages = false
             }
         }
     }

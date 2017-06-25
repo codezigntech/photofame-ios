@@ -33,7 +33,12 @@ class MenuVC: UIViewController {
         photographerButton.setImage(UIImage(named: "photographer"), for: .normal)
         userButton.setImage(UIImage(named: "user"), for: .normal)
         
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+        
+        let dashboardVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DashboardVC") as! DashboardVC
+        
+        self.present(dashboardVC, animated: true, completion: nil)
+        
     }
     
     @IBAction func photographerAction(_ sender: UIButton) {

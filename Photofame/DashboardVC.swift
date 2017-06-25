@@ -68,7 +68,7 @@ class DashboardVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        photoStreamViewController?.loadImages()
+//        photoStreamViewController?.loadImages()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

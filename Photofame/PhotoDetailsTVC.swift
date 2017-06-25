@@ -262,7 +262,7 @@ extension PhotoDetailsTVC: UICollectionViewDataSource, UICollectionViewDelegate,
 extension PhotoDetailsTVC: OptionsTableViewCellProtocol {
     
     func didTapOnDownload() {
-        UIImageWriteToSavedPhotosAlbum(photo!, self, #selector(savedMessage), nil)
+       // UIImageWriteToSavedPhotosAlbum(photo!, self, #selector(savedMessage), nil)
     }
     
     func savedMessage() {
