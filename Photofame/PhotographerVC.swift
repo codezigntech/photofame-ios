@@ -1,18 +1,19 @@
 //
-//  DashboardVC.swift
+//  PhotographerVC.swift
 //  Photofame
 //
-//  Created by Appit on 6/24/17.
+//  Created by Appit on 6/25/17.
 //  Copyright © 2017 Appit. All rights reserved.
 //
 
 import UIKit
 
-class DashboardVC: UIViewController {
+class PhotographerVC: UIViewController {
 
+    
     // MARK: - Properties
     
-    var photoStreamViewController: PhotoStreamViewController?
+    
     
     // MARK: - Outlets
     @IBOutlet weak var gridContainerView: UIView!
@@ -27,14 +28,15 @@ class DashboardVC: UIViewController {
     @IBOutlet weak var loadMoreActivity: UIActivityIndicatorView!
     
     
-    
     // MARK: - Actions
     
     @IBAction func menuAction(_ sender: UIButton) {
         
-        let menuVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MenuVC") as! MenuVC
+        dismiss(animated: true, completion: nil)
         
-        self.present(menuVC, animated: true, completion: nil)
+//        let menuVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MenuVC") as! MenuVC
+//        
+//        self.present(menuVC, animated: true, completion: nil)
     }
     
     
@@ -54,9 +56,6 @@ class DashboardVC: UIViewController {
         }
     }
     
-    
-    // MARK: - Override methods
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -64,22 +63,12 @@ class DashboardVC: UIViewController {
         hideEditorsView()
         
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        photoStreamViewController?.loadImages()
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "PhotoStreamViewController" {
-            
-            // Set references
-            photoStreamViewController = segue.destination as? PhotoStreamViewController
-            photoStreamViewController?.dashboardViewController = self
-        }
-    }
 
     // MAKR: -
     
@@ -103,26 +92,13 @@ class DashboardVC: UIViewController {
         self.popularLineView.isHidden = true
         self.gridContainerView.isHidden = true
     }
-
+    
     func showPopularView() {
         
         self.popularButton.alpha = 1.0
         self.popularLineView.isHidden = false
         self.gridContainerView.isHidden = false
     }
-    
-    // MARK: - 
-    
-    func showLoadMore() {
-        
-        self.loadMoreActivity.startAnimating()
-        self.loadMoreActivity.isHidden = false
-    }
-    
-    
-    func hideLoadMore() {
-        
-        self.loadMoreActivity.stopAnimating()
-    }
-    
+
+
 }

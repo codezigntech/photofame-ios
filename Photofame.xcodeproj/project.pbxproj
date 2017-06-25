@@ -40,6 +40,17 @@
 		E838FCE21EFEE12A007097E4 /* LoadMore.xib in Resources */ = {isa = PBXBuildFile; fileRef = E838FCE11EFEE12A007097E4 /* LoadMore.xib */; };
 		E838FCE41EFEF6FB007097E4 /* SharedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCE31EFEF6FB007097E4 /* SharedCache.swift */; };
 		E838FCE61EFF0CA0007097E4 /* MediaDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCE51EFF0CA0007097E4 /* MediaDetails.swift */; };
+		E838FCE91EFF1D4B007097E4 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCE81EFF1D4B007097E4 /* MenuVC.swift */; };
+		E838FCEB1EFF24C8007097E4 /* PhotographerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCEA1EFF24C8007097E4 /* PhotographerVC.swift */; };
+		E838FCED1EFF2585007097E4 /* UploadsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCEC1EFF2585007097E4 /* UploadsVC.swift */; };
+		E838FCEF1EFF2D1D007097E4 /* UploadPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCEE1EFF2D1D007097E4 /* UploadPhotoCell.swift */; };
+		E838FCF91EFF34D9007097E4 /* HTTPSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCF21EFF34D9007097E4 /* HTTPSecurity.swift */; };
+		E838FCFA1EFF34D9007097E4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E838FCF31EFF34D9007097E4 /* Info.plist */; };
+		E838FCFB1EFF34D9007097E4 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCF41EFF34D9007097E4 /* Operation.swift */; };
+		E838FCFC1EFF34D9007097E4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCF51EFF34D9007097E4 /* Request.swift */; };
+		E838FCFD1EFF34D9007097E4 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCF61EFF34D9007097E4 /* StatusCode.swift */; };
+		E838FCFE1EFF34D9007097E4 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838FCF81EFF34D9007097E4 /* Upload.swift */; };
+		E838FD001EFF3E13007097E4 /* demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E838FCFF1EFF3E13007097E4 /* demo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +110,18 @@
 		E838FCE11EFEE12A007097E4 /* LoadMore.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadMore.xib; sourceTree = "<group>"; };
 		E838FCE31EFEF6FB007097E4 /* SharedCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedCache.swift; sourceTree = "<group>"; };
 		E838FCE51EFF0CA0007097E4 /* MediaDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaDetails.swift; sourceTree = "<group>"; };
+		E838FCE81EFF1D4B007097E4 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		E838FCEA1EFF24C8007097E4 /* PhotographerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerVC.swift; sourceTree = "<group>"; };
+		E838FCEC1EFF2585007097E4 /* UploadsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadsVC.swift; sourceTree = "<group>"; };
+		E838FCEE1EFF2D1D007097E4 /* UploadPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadPhotoCell.swift; sourceTree = "<group>"; };
+		E838FCF21EFF34D9007097E4 /* HTTPSecurity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPSecurity.swift; sourceTree = "<group>"; };
+		E838FCF31EFF34D9007097E4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E838FCF41EFF34D9007097E4 /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		E838FCF51EFF34D9007097E4 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		E838FCF61EFF34D9007097E4 /* StatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
+		E838FCF71EFF34D9007097E4 /* SwiftHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftHTTP.h; sourceTree = "<group>"; };
+		E838FCF81EFF34D9007097E4 /* Upload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
+		E838FCFF1EFF3E13007097E4 /* demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,16 +173,10 @@
 			isa = PBXGroup;
 			children = (
 				E838FC711EFE42C6007097E4 /* AppDelegate.swift */,
-				E838FCB91EFE6649007097E4 /* DashboardVC.swift */,
-				E838FCC91EFE9503007097E4 /* Utilities.swift */,
-				E838FCE31EFEF6FB007097E4 /* SharedCache.swift */,
+				E838FCE71EFF1D01007097E4 /* AppHelpers */,
 				E838FCDE1EFEC7AB007097E4 /* NetworkManager */,
-				E838FCD41EFEA4A5007097E4 /* PhotoDetails */,
 				E838FCC61EFE9277007097E4 /* Models */,
 				E838FCC51EFE9259007097E4 /* Controllers */,
-				E838FCBD1EFE6805007097E4 /* EditorsVC.swift */,
-				E838FCA31EFE46F0007097E4 /* Keys.swift */,
-				E838FCB81EFE5130007097E4 /* StaggeredView */,
 				E838FCAB1EFE50F7007097E4 /* Assets */,
 				E838FC751EFE42C6007097E4 /* Main.storyboard */,
 				E838FC781EFE42C6007097E4 /* Assets.xcassets */,
@@ -215,6 +232,15 @@
 		E838FCC51EFE9259007097E4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E838FCB91EFE6649007097E4 /* DashboardVC.swift */,
+				E838FCBD1EFE6805007097E4 /* EditorsVC.swift */,
+				E838FCE81EFF1D4B007097E4 /* MenuVC.swift */,
+				E838FCEA1EFF24C8007097E4 /* PhotographerVC.swift */,
+				E838FCEC1EFF2585007097E4 /* UploadsVC.swift */,
+				E838FCFF1EFF3E13007097E4 /* demo.jpg */,
+				E838FCEE1EFF2D1D007097E4 /* UploadPhotoCell.swift */,
+				E838FCD41EFEA4A5007097E4 /* PhotoDetails */,
+				E838FCB81EFE5130007097E4 /* StaggeredView */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -265,6 +291,32 @@
 				E838FCDF1EFECB2D007097E4 /* NetworkManager.swift */,
 			);
 			name = NetworkManager;
+			sourceTree = "<group>";
+		};
+		E838FCE71EFF1D01007097E4 /* AppHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				E838FCA31EFE46F0007097E4 /* Keys.swift */,
+				E838FCC91EFE9503007097E4 /* Utilities.swift */,
+				E838FCF11EFF34D9007097E4 /* SwiftHTTP */,
+				E838FCE31EFEF6FB007097E4 /* SharedCache.swift */,
+			);
+			name = AppHelpers;
+			sourceTree = "<group>";
+		};
+		E838FCF11EFF34D9007097E4 /* SwiftHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				E838FCF21EFF34D9007097E4 /* HTTPSecurity.swift */,
+				E838FCF31EFF34D9007097E4 /* Info.plist */,
+				E838FCF41EFF34D9007097E4 /* Operation.swift */,
+				E838FCF51EFF34D9007097E4 /* Request.swift */,
+				E838FCF61EFF34D9007097E4 /* StatusCode.swift */,
+				E838FCF71EFF34D9007097E4 /* SwiftHTTP.h */,
+				E838FCF81EFF34D9007097E4 /* Upload.swift */,
+			);
+			name = SwiftHTTP;
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +437,8 @@
 				E838FC7C1EFE42C6007097E4 /* LaunchScreen.storyboard in Resources */,
 				E838FC791EFE42C6007097E4 /* Assets.xcassets in Resources */,
 				E838FC771EFE42C6007097E4 /* Main.storyboard in Resources */,
+				E838FCFA1EFF34D9007097E4 /* Info.plist in Resources */,
+				E838FD001EFF3E13007097E4 /* demo.jpg in Resources */,
 				E838FCAA1EFE50EE007097E4 /* Photos.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,9 +465,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E838FCBA1EFE6649007097E4 /* DashboardVC.swift in Sources */,
+				E838FCEF1EFF2D1D007097E4 /* UploadPhotoCell.swift in Sources */,
 				E838FCA41EFE46F0007097E4 /* Keys.swift in Sources */,
 				E838FC721EFE42C6007097E4 /* AppDelegate.swift in Sources */,
+				E838FCF91EFF34D9007097E4 /* HTTPSecurity.swift in Sources */,
 				E838FCDC1EFEA4E6007097E4 /* TagCell.swift in Sources */,
+				E838FCFC1EFF34D9007097E4 /* Request.swift in Sources */,
 				E838FCB61EFE5124007097E4 /* RoundedCornersView.swift in Sources */,
 				E838FCD31EFE9E2E007097E4 /* TagsTableViewCell.swift in Sources */,
 				E838FCCF1EFE9E1E007097E4 /* OptionsTableViewCell.swift in Sources */,
@@ -421,14 +478,20 @@
 				E838FCB71EFE5124007097E4 /* UIImage+Decompression.swift in Sources */,
 				E838FCD11EFE9E26007097E4 /* InfoTableViewCell.swift in Sources */,
 				E838FCE41EFEF6FB007097E4 /* SharedCache.swift in Sources */,
+				E838FCFE1EFF34D9007097E4 /* Upload.swift in Sources */,
 				E838FCC21EFE889E007097E4 /* PhotoDetailsTVC.swift in Sources */,
 				E838FCDA1EFEA4E6007097E4 /* FlowLayout.swift in Sources */,
+				E838FCFB1EFF34D9007097E4 /* Operation.swift in Sources */,
 				E838FCE01EFECB2D007097E4 /* NetworkManager.swift in Sources */,
+				E838FCE91EFF1D4B007097E4 /* MenuVC.swift in Sources */,
 				E838FCCA1EFE9503007097E4 /* Utilities.swift in Sources */,
 				E838FCE61EFF0CA0007097E4 /* MediaDetails.swift in Sources */,
 				E838FCB51EFE5124007097E4 /* PinterestLayout.swift in Sources */,
 				E838FCB41EFE5124007097E4 /* PhotoStreamViewController.swift in Sources */,
+				E838FCED1EFF2585007097E4 /* UploadsVC.swift in Sources */,
+				E838FCEB1EFF24C8007097E4 /* PhotographerVC.swift in Sources */,
 				E838FCB21EFE5124007097E4 /* AnnotatedPhotoCell.swift in Sources */,
+				E838FCFD1EFF34D9007097E4 /* StatusCode.swift in Sources */,
 				E838FCCD1EFE9E0E007097E4 /* PhotoTableViewCell.swift in Sources */,
 				E838FCB31EFE5124007097E4 /* Photo.swift in Sources */,
 				E838FCBE1EFE6805007097E4 /* EditorsVC.swift in Sources */,

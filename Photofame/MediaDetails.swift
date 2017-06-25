@@ -21,5 +21,7 @@ class MediaDetails: NSObject {
     var views: Int?
     
     var tags = [String]()
+    var image: UIImage?
+    var tagsObjects = [Tag]()
     
 }

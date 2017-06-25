@@ -17,9 +17,7 @@ class PhotoDetailsTVC: UIViewController {
     var photoObject: Photo!
     
     var tags = [Tag]()
-    
     var mediaDetails = MediaDetails()
-    
     var photo: UIImage?
     
 //    let TAGS = ["Tech", "Design", "Humor", "Travel", "Music", "Writing", "Social Media", "Life", "Education", "Edtech", "Education Reform", "Photography", "Startup", "Poetry", "Women In Tech", "Female Founders", "Business", "Fiction", "Love", "Food", "Sports"]
@@ -184,7 +182,7 @@ extension PhotoDetailsTVC: UITableViewDataSource, UITableViewDelegate {
             infoCell.hireMeButton.layer.cornerRadius = infoCell.hireMeButton.frame.height / 2.0
             
             // data
-            infoCell.nameLabel.text = mediaDetails.celebrityName
+//            infoCell.nameLabel.text = mediaDetails.celebrityName
             
             
             return infoCell

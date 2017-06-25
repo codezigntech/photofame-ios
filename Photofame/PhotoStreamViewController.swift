@@ -43,10 +43,7 @@ class PhotoStreamViewController: UICollectionViewController {
             collectionViewFlowLayout.headerReferenceSize = CGSize(width: self.collectionView!.frame.size.width, height: 80)
         }
         
-        
-        
         loadImages()
-        
     }
     
     
@@ -88,7 +85,10 @@ class PhotoStreamViewController: UICollectionViewController {
                     }
                 }
                 
-                self.collectionView?.reloadData()
+                DispatchQueue.main.async {
+                    self.collectionView?.reloadData()
+                }
+                
                 self.isLoadingImages = false
             }
         }
